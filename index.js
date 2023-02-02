@@ -6,6 +6,12 @@ const bodyParser = require('body-parser');
 const expresConfig = require('./config/expressConfig');
 const port = 3000;
 
+app.get("*", (req, res, next)=> {
+  req.cart = [];
+  next();
+})
+
+
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
