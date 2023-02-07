@@ -7,7 +7,9 @@ const expresConfig = require('./config/expressConfig');
 const port = 3000;
 
 app.get("*", (req, res, next)=> {
-  req.cart = [];
+  if(typeof req.session === "undefined"){ 
+    req.session = {};
+  }
   next();
 })
 

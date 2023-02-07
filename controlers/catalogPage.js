@@ -1,9 +1,9 @@
 module.exports = async (req, res) => {
-    if(typeof req.cart === "undefined") {
-        req.cart = [];
+    // if(typeof req.cart === "undefined") {
+    //     req.cart = [];
         
-    }
-    console.log(req.cart);
+    // }
+    console.log(req.session);
 
     const data = await req.storage.getAllItems();
     // console.log(data);

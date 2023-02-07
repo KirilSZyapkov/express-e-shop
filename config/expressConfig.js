@@ -10,7 +10,7 @@ module.exports = async (app)=>{
     app.engine('handlebars', engine());
     app.set('view engine', 'handlebars');
     app.set('views', './views');
-    app.use(express.static('publik'));
+    app.use(express.static('public'));
     app.use(cookieParser());
     
     

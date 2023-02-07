@@ -1,6 +1,6 @@
 module.exports = (req, res) => {
 
-    console.log(req.cart);
+    console.log(req);
     res.render('detailsPage', {
         titel: 'Test'
     })
