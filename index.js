@@ -15,14 +15,13 @@ app.get("*", (req, res, next) => {
   if(typeof req. session === "undefined") {
     req.session = {};
   }
-  console.log(req.session);
-
+  
   next();
 })
 
-dataBase(app);
 async function start() {
   
+  await dataBase(app);
   await expresConfig(app);
 
   app.listen(port, () => {

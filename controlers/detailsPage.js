@@ -1,7 +1,12 @@
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
 
-    console.log("detail", req.session);
-    res.render('detailsPage', {
-        titel: 'Test'
-    })
+    const { id } = req.params;
+    const item = await req.storage.getItemById(id);
+    console.log(item);
+  
+    res.render("detailsPage", {
+      titel: "Test",
+      item
+    });
+
 }

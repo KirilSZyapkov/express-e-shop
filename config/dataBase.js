@@ -12,12 +12,12 @@ module.exports = (app) => {
 
         db.on('error', (err) => {
             console.log('Connection error!');
-            reject;
+            reject();
         });
 
         db.on('open', ()=> {
             console.log("Connected to DB!");
-            resolve;
+            resolve();
         })
     })
 }
