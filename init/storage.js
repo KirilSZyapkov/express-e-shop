@@ -3,8 +3,7 @@ const Item = require('../models/Item');
 function initStorage() {
     return (req, res, next) => {
         req.storage = {
-            getAllItems,
-            getItemById
+            getAllItems
         }
 
         next();
@@ -16,7 +15,7 @@ async function getAllItems(){
 };
 
 async function getItemById(id){
-    return Item.findById(id).lean();
+    return Item.find({}).lean();
 };
 
 module.exports = initStorage;
