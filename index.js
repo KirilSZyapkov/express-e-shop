@@ -19,9 +19,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 start();
 
-dataBase(app);
 async function start() {
   
+  await dataBase(app);
   await expresConfig(app);
 
   app.listen(port, () => {

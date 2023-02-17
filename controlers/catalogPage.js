@@ -3,7 +3,6 @@ module.exports = async (req, res) => {
     //     req.cart = [];
         
     // }
-    console.log(req.session);
 
     const data = await req.storage.getAllItems();
     // console.log(data);

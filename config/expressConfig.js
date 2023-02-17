@@ -2,7 +2,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const initStorage = require('../init/storage');
 const {engine} = require('express-handlebars');
-const router = require('../config/router');
+const router = require('./router');
 
 
 module.exports = async (app)=>{

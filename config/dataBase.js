@@ -11,13 +11,13 @@ module.exports = (app) => {
         const db = mongoose.connection;
 
         db.on('error', (err) => {
-            console.log('Connection error!');
-            reject;
+            console.log('Connection DB error!', err);
+            reject();
         });
 
         db.on('open', ()=> {
             console.log("Connected to DB!");
-            resolve;
+            resolve();
         })
     })
 }

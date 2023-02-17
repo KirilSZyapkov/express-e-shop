@@ -1,21 +1,24 @@
 <div class="row row-cols-1 row-cols-md-4 g-4">
 
-{{#each data}}
+    {{#each data}}
 
-   <div class="col">
-        <div class="card mt-5 h-100" style="width: 18rem;">
-            <img src={{imgUrl}} class="card-img-top" alt="image">
-            <div class="card-body">
-                <h5 class="card-title">{{name}}</h5>                
-                <p class="card-text">{{description}}</p>
-            </div>
-            <div class="card-footer">
+        <div class="col">
+            <div class="card mt-5" style="width: 18rem;">
+                <img src={{imgUrl}} class="card-img-top img-fluid" style="height: 200px" alt="image">
+                <div class="card-body">
+                    <h5 class="card-title">{{name}}</h5>                
+                    <p class="card-text">
+                        <div class="overflow-hidden text-muted" style="height: 150px;">{{description}}</div>
+                    </p>
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center">
 
-                <a href="/catalog/details/{{_id}}" class="btn btn-primary text-end">Read more...</a>
+                    <a href="/catalog/details/{{_id}}" class="btn btn-primary text-end">Read more...</a>
+                    <p class="m-0">Price: {{price}}€</p>
+                </div>
             </div>
         </div>
-    </div>
 
-{{/each}}
+    {{/each}}
 
 </div>
