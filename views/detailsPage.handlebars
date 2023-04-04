@@ -1,31 +1,40 @@
-<section>
+<section class="container h-100">
+  <div class="d-flex align-items-center">
+
+        <h1 class="me-5">{{item.name}}</h1>
+        <p class="m-0 fs-4">{{item.price}} €/kg</p>
+  </div>
   <div class="row">
     <div class="col">
-      <img src={{item.imgUrl}} alt="pic" />
+      <img class="w-75 h-75" src={{item.imgUrl}} alt="pic" />
     </div>
 
     <div class="col">
-      <div>
-
-        <p>{{item.name}}</p>
-        <p>{{item.price}}</p>
-      </div>
-
-      <div>
-        <div>
-          <p>Quantity</p>
-          <div>
-            <button>-</button>
-            <p>1</p>
-            <button>+</button>
-          </div>
+      <div class="d-flex justify-content-between align-items-center det-quan-sec p-4 bg-light">
+        <div class="d-flex justify-content-between align-items-center w-25">
+            <a href="/catalog/details/{{item.id}}" class="rounded-circle btn btn-secondary d-flex justify-content-center align-items-center" style="width: 40px; height: 40px">-</a>
+            <p class="m-0">1</p>
+            <a href="/catalog/details/{{item.id}}" class="rounded-circle btn btn-secondary d-flex justify-content-center align-items-center" style="width: 40px; height: 40px">+</a>
         </div>
-        <div>
+          <div>
+            Total: 556€
+          </div>
+          <div>
           <a
             href="/catalog/details/{{item.id}}"
             class="btn btn-outline-success"
           >Add to Cart</a>
         </div>
+      </div>
+
+      <div>
+        <div class="bg-light p-3" style="width: fit-content; border-top-left-radius: 15px; border-top-right-radius: 15px">
+          Description          
+        </div>
+        <div class="bg-light p-3" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px">
+          {{item.description}}
+        </div>
+        
       </div>
     </div>
 
