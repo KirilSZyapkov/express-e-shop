@@ -12,7 +12,11 @@ app.use(bodyParser.json());
 start();
 
 app.get("*", (req, res, next) => {
-  if(typeof req. session === "undefined") {
+
+  const body = req.body;
+  console.log(body);
+ 
+  if(typeof req.session === "undefined") {
     req.session = {};
   }
   
