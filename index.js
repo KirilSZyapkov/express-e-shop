@@ -11,17 +11,17 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 start();
 
-app.get("*", (req, res, next) => {
+// app.post("*", (req, res, next) => {
 
-  const body = req.body;
-  console.log(body);
+//   const body = req.body;
+//   console.log(body);
  
-  if(typeof req.session === "undefined") {
-    req.session = {};
-  }
+//   if(typeof req.session === "undefined") {
+//     req.session = {};
+//   }
   
-  next();
-})
+//   next();
+// })
 
 async function start() {
   
